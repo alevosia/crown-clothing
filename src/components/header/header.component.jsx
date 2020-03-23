@@ -26,7 +26,7 @@ const Header = ({ user, history }) => {
 				{user ? (
 					<Fragment>
 						<Link className='option' to='/account'>
-							{user.displayName.substr(0, user.displayName.indexOf(' ')) ?? 'UNNAMED'}
+							{user.displayName.split(' ')[0] ?? 'UNNAMED'}
 						</Link>
 						<div className='option' onClick={() => signout(history)}>
 							SIGN OUT
