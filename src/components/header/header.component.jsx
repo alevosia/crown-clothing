@@ -1,11 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { Fragment } from 'react'
+import { Link, withRouter } from 'react-router-dom'
 
 import './header.styles.scss'
 
 import { auth } from '../../firebase/firebase.utils'
 import { ReactComponent as Logo } from '../../assets/crown.svg'
 
+const signout = async (history) => {
+	await auth.signOut()
+	history.push('/signin')
+}
 const Header = ({ user, history }) => {
 	return (
 		<div className='header'>
@@ -20,9 +24,14 @@ const Header = ({ user, history }) => {
 					CONTACT
 				</Link>
 				{user ? (
-					<div className='option' onClick={() => auth.signOut()}>
-						SIGN OUT
-					</div>
+					<Fragment>
+						<Link className='option' to='/account'>
+							{user.displayName.substr(0, user.displayName.indexOf(' ')) ?? 'UNNAMED'}
+						</Link>
+						<div className='option' onClick={() => signout(history)}>
+							SIGN OUT
+						</div>
+					</Fragment>
 				) : (
 					<Link className='option' to='/signin'>
 						SIGN IN
@@ -33,4 +42,4 @@ const Header = ({ user, history }) => {
 	)
 }
 
-export default Header
+export default withRouter(Header)
