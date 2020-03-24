@@ -43,7 +43,8 @@
 			"plugin:prettier/recommended"
 		],
 		"rules": {
-			"no-eq-null": "error"
+			"no-eq-null": "error",
+			"no-console": "warn"
 		}
 	},
 	"browserslist": {
