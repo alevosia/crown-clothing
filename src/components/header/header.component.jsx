@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
@@ -6,13 +6,16 @@ import './header.styles.scss'
 
 import { auth } from '../../firebase/firebase.utils'
 import { ReactComponent as Logo } from '../../assets/crown.svg'
+import CartIcon from '../cart-icon/cart-icon.component'
+import CartDropdown from '../cart-dropdown/cart-dropdown.component'
 
-const Header = ({ currentUser }) => {
+const Header = ({ currentUser, isCartHidden }) => {
 	return (
 		<div className='header'>
 			<Link className='logo-container' to='/'>
 				<Logo className='logo' />
 			</Link>
+
 			<div className='options'>
 				<Link className='option' to='/shop'>
 					SHOP
@@ -21,26 +24,25 @@ const Header = ({ currentUser }) => {
 					CONTACT
 				</Link>
 				{currentUser ? (
-					<Fragment>
-						<Link className='option' to='/account'>
-							{currentUser.displayName.split(' ')[0] ?? 'UNNAMED'}
-						</Link>
-						<div className='option' onClick={() => auth.signOut()}>
-							SIGN OUT
-						</div>
-					</Fragment>
+					<div className='option' onClick={() => auth.signOut()}>
+						SIGN OUT
+					</div>
 				) : (
 					<Link className='option' to='/signin'>
 						SIGN IN
 					</Link>
 				)}
+				<CartIcon />
 			</div>
+			{isCartHidden ? null : <CartDropdown />}
 		</div>
 	)
 }
 
-const mapStateToProps = (state) => ({
-	currentUser: state.user.currentUser,
+// pass the global state from redux store as a props to this component
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+	currentUser: currentUser,
+	isCartHidden: hidden,
 })
 
 export default connect(mapStateToProps)(Header)
