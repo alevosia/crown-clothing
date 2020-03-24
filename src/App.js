@@ -29,9 +29,8 @@ class App extends Component {
 						...snapShot.data(),
 					})
 				})
-			} else {
-				setCurrentUser(null)
 			}
+			setCurrentUser(userAuth)
 		})
 	}
 
@@ -50,7 +49,7 @@ class App extends Component {
 					<Route exact path='/shop'>
 						<ShopPage />
 					</Route>
-					<Route path='/signin'>
+					<Route exact path='/signin'>
 						{this.props.currentUser ? <Redirect to='/' /> : <SignInAndSignUpPage />}
 					</Route>
 				</Switch>
@@ -59,8 +58,12 @@ class App extends Component {
 	}
 }
 
+const mapStateToProps = ({ user }) => ({
+	currentUser: user.currentUser,
+})
+
 const mapDispatchToProps = (dispatch) => ({
 	setCurrentUser: (user) => dispatch(setCurrentUser(user)),
 })
 
-export default connect(null, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App)
