@@ -1,3 +1,5 @@
+Browse the store at https://alevfalse.github.io/crown-clothing
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
