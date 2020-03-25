@@ -5,8 +5,10 @@ import { createStructuredSelector } from 'reselect'
 // assets
 import { ReactComponent as ShoppingIcon } from '../../assets/shopping-bag.svg'
 
-// redux
+// actions
 import { toggleCartHidden } from '../../redux/cart/cart.actions'
+
+// seclectors
 import { selectCartItemsCount } from '../../redux/cart/cart.selectors'
 
 // styles

@@ -10,11 +10,11 @@
 	color: white;
 	text-transform: uppercase;
 	font-family: 'Open Sans', sans-serif;
-	font-weight: bolder;
+	font-weight: bold;
 	border: 1px solid black;
-	cursor: pointer;
 	display: flex;
 	justify-content: center;
+	cursor: pointer;
 
 	&:hover {
 		background-color: white;
@@ -27,7 +27,7 @@
 		border: 1px solid #4285f4;
 
 		&:hover {
-			background-color: #357ae8;
+			background-color: #1c67df;
 		}
 	}
 
