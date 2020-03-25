@@ -19,7 +19,7 @@ export const decrementItemQuantity = (item) => ({
 	payload: item,
 })
 
-export const removeItem = (item) => ({
+export const clearItemFromCart = (item) => ({
 	type: CartActionTypes.REMOVE_ITEM_FROM_CART,
 	payload: item,
 })
