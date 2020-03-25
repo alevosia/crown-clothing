@@ -1,13 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
 
-import './header.styles.scss'
-
+// utils
 import { auth } from '../../firebase/firebase.utils'
+
+// assets
 import { ReactComponent as Logo } from '../../assets/crown.svg'
+
+// components
 import CartIcon from '../cart-icon/cart-icon.component'
 import CartDropdown from '../cart-dropdown/cart-dropdown.component'
+
+// selectors
+import { selectCurrentUser } from '../../redux/user/user.selectors'
+import { selectCartHidden } from '../../redux/cart/cart.selectors'
+
+// styles
+import './header.styles.scss'
 
 const Header = ({ currentUser, isCartHidden }) => {
 	return (
@@ -40,9 +51,9 @@ const Header = ({ currentUser, isCartHidden }) => {
 }
 
 // pass the global state from redux store as a props to this component
-const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
-	currentUser: currentUser,
-	isCartHidden: hidden,
+const mapStateToProps = createStructuredSelector({
+	currentUser: selectCurrentUser,
+	isCartHidden: selectCartHidden,
 })
 
 export default connect(mapStateToProps)(Header)
