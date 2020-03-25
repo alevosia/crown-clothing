@@ -5,6 +5,8 @@ import { connect } from 'react-redux'
 import './App.css'
 
 import Header from './components/header/header.component'
+import Body from './components/body/body.component'
+import Footer from './components/footer/footer.component'
 import HomePage from './pages/home/home.component'
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component'
 import ShopPage from './pages/shop/shop.component'
@@ -42,17 +44,20 @@ class App extends Component {
 		return (
 			<div>
 				<Header />
-				<Switch>
-					<Route exact path='/'>
-						<HomePage />
-					</Route>
-					<Route exact path='/shop'>
-						<ShopPage />
-					</Route>
-					<Route exact path='/signin'>
-						{this.props.currentUser ? <Redirect to='/' /> : <SignInAndSignUpPage />}
-					</Route>
-				</Switch>
+				<Body>
+					<Switch>
+						<Route exact path='/'>
+							<HomePage />
+						</Route>
+						<Route exact path='/shop'>
+							<ShopPage />
+						</Route>
+						<Route exact path='/signin'>
+							{this.props.currentUser ? <Redirect to='/' /> : <SignInAndSignUpPage />}
+						</Route>
+					</Switch>
+				</Body>
+				<Footer />
 			</div>
 		)
 	}
