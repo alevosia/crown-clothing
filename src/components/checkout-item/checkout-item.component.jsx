@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import './checkout-item.styles.scss'
 
 // actions
-import { removeItem } from '../../redux/cart/cart.actions'
+import { clearItemFromCart } from '../../redux/cart/cart.actions'
 
 const CheckoutItem = ({ item, dispatch }) => {
 	const { imageUrl, name, quantity, price } = item
@@ -23,8 +23,8 @@ const CheckoutItem = ({ item, dispatch }) => {
 			<div className='price'>
 				<span>{price}</span>
 			</div>
-			<span className='remove-button' onClick={() => dispatch(removeItem(item))}>
-				X
+			<span className='remove-button' onClick={() => dispatch(clearItemFromCart(item))}>
+				&#10005;
 			</span>
 		</div>
 	)
