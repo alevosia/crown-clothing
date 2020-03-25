@@ -12,6 +12,3 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
 	// new item
 	return [...cartItems, { ...cartItemToAdd, quantity: 1 }]
 }
-
-export const getTotalCartItems = (cartItems) =>
-	cartItems.reduce((prevTotal, currentItem) => prevTotal + currentItem.quantity, 0)
