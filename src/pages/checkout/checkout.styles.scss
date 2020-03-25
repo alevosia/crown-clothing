@@ -1,5 +1,5 @@
 .checkout-page {
-	width: 75%;
+	width: 55%;
 	min-width: 650px;
 	min-height: 90vh;
 	display: flex;
@@ -14,6 +14,10 @@
 		display: flex;
 		justify-content: space-between;
 		border-bottom: 1px solid darkgrey;
+
+		:not(:first-child) {
+			text-align: center;
+		}
 
 		.header-block {
 			text-transform: capitalize;
