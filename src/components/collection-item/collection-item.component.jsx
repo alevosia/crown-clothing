@@ -1,9 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import CustomButton from '../custom-button/custom-button.component'
+// actions
 import { addItem } from '../../redux/cart/cart.actions.js'
 
+// components
+import CustomButton from '../custom-button/custom-button.component'
+
+// styles
 import './collection-item.styles.scss'
 
 const CollectionItem = ({ item, addItem }) => {

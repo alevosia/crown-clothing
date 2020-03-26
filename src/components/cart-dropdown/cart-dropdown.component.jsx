@@ -2,15 +2,15 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
-// components
-import CustomButton from '../custom-button/custom-button.component.jsx'
-import CartItem from '../cart-item/cart-item.component'
-
 // actions
 import { toggleCartHidden } from '../../redux/cart/cart.actions'
 
 // selectors
 import { selectCartItems } from '../../redux/cart/cart.selectors'
+
+// components
+import CustomButton from '../custom-button/custom-button.component.jsx'
+import CartItem from '../cart-item/cart-item.component'
 
 // styles
 import './cart-dropdown.styles.scss'

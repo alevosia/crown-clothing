@@ -3,19 +3,19 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 
-// utils
+// firebase
 import { auth } from '../../firebase/firebase.utils'
 
 // assets
 import { ReactComponent as Logo } from '../../assets/crown.svg'
 
-// components
-import CartIcon from '../cart-icon/cart-icon.component'
-import CartDropdown from '../cart-dropdown/cart-dropdown.component'
-
 // selectors
 import { selectCurrentUser } from '../../redux/user/user.selectors'
 import { selectCartHidden } from '../../redux/cart/cart.selectors'
+
+// components
+import CartIcon from '../cart-icon/cart-icon.component'
+import CartDropdown from '../cart-dropdown/cart-dropdown.component'
 
 // styles
 import './header.styles.scss'

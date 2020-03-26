@@ -1,7 +1,9 @@
 import React from 'react'
 
+// components
 import CollectionItem from '../collection-item/collection-item.component'
 
+// styles
 import './collection-preview.styles.scss'
 
 const CollectionPreview = ({ title, items }) => (
