@@ -31,7 +31,7 @@ const Header = ({ currentUser, isCartHidden }) => {
 				<Link className='option' to='/shop'>
 					SHOP
 				</Link>
-				<Link className='option' to='/contact'>
+				<Link className='option' to='/'>
 					CONTACT
 				</Link>
 				{currentUser ? (
