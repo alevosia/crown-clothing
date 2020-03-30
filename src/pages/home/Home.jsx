@@ -1,10 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
 
 // components
 import Directory from '../../components/directory/directory.component'
 
-// styles
-import { HomePageContainer } from './home.styles'
+// styled components
+const HomePageContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`
 
 const HomePage = () => (
 	<HomePageContainer>

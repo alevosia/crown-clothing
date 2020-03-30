@@ -12,7 +12,7 @@ import Body from './components/body/body.component'
 import Footer from './components/footer/footer.component'
 
 // pages
-import HomePage from './pages/home/home.component'
+import HomePage from './pages/home/Home'
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component'
 import ShopPage from './pages/shop/shop.component'
 import CheckoutPage from './pages/checkout/checkout.component'
