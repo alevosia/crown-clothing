@@ -7,7 +7,7 @@ import { createStructuredSelector } from 'reselect'
 import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 
 // components
-import Header from './components/header/header.component'
+import Header from './components/header/Header'
 import Body from './components/body/body.component'
 import Footer from './components/footer/footer.component'
 

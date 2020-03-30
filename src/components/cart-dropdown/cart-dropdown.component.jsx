@@ -9,7 +9,7 @@ import { toggleCartHidden } from '../../redux/cart/cart.actions'
 import { selectCartItems } from '../../redux/cart/cart.selectors'
 
 // components
-import CustomButton from '../custom-button/custom-button.component.jsx'
+import CustomButton from '../custom-button/CustomButton.jsx'
 import CartItem from '../cart-item/cart-item.component'
 
 // styles
