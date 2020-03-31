@@ -35,6 +35,7 @@ export const SpinnerContainer = styled.div`
 
 const withSpinner = (WrappedComponent) => {
 	const Spinner = ({ isLoading, ...otherProps }) => {
+		console.log(isLoading)
 		return isLoading ? (
 			<SpinnerOverlay>
 				<SpinnerContainer />
