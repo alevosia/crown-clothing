@@ -9,12 +9,12 @@ import { firestore, convertCollectionsSnapshotToMap } from '../../firebase/fireb
 import { updateCollections } from '../../redux/shop/shop.actions'
 
 // components
-import WithSpinner from '../../components/WithSpinner'
+import withSpinner from '../../components/withSpinner'
 import CollectionsOverview from '../../components/collections-overview/collections-overview.component'
 import CollectionPage from '../collection/collection.component'
 
-const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview)
-const CollectionPageWithSpinner = WithSpinner(CollectionPage)
+const CollectionsOverviewWithSpinner = withSpinner(CollectionsOverview)
+const CollectionPageWithSpinner = withSpinner(CollectionPage)
 
 class ShopPage extends Component {
 	state = {
@@ -27,7 +27,7 @@ class ShopPage extends Component {
 		const { updateCollections } = this.props
 		const collectionsRef = firestore.collection('collections')
 
-		this.unsubscribeFromSnapshot = collectionsRef.onSnapshot(async (collectionsSnapshot) => {
+		collectionsRef.get().then(async (collectionsSnapshot) => {
 			const collectionsMap = convertCollectionsSnapshotToMap(collectionsSnapshot)
 			updateCollections(collectionsMap)
 			this.setState({ isLoading: false })
