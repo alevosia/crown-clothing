@@ -5,7 +5,7 @@
 	"homepage": "https://royal-clothing.herokuapp.com/",
 	"scripts": {
 		"start": "react-scripts start",
-		"prebuild": "npm run format && npm run lint",
+		"prebuild": "npm run format && npm run lint:fix",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
@@ -42,8 +42,6 @@
 		"eslint-config-prettier": "^6.10.0",
 		"eslint-plugin-prettier": "^3.1.2",
 		"eslint-plugin-react": "^7.19.0",
-		"husky": "^4.2.3",
-		"lint-staged": "^10.0.8",
 		"prettier": "^2.0.1",
 		"typescript": "^3.8.3"
 	},
@@ -71,20 +69,5 @@
 	},
 	"resolutions": {
 		"@babel/preset-env": "^7.8.0"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"*.+(js|jsx)": [
-			"eslint --fix",
-			"git add"
-		],
-		"*.+(json|css|md)": [
-			"prettier --write",
-			"git add"
-		]
 	}
 }
