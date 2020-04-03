@@ -60,7 +60,7 @@ class SignUp extends Component {
 				<TitleText>I do not have an account</TitleText>
 				<span>Sign up</span>
 
-				<form className='sign-up-form' onSubmit={this.handleSubmit}>
+				<form onSubmit={this.handleSubmit}>
 					<FormInput
 						type='text'
 						name='displayName'
