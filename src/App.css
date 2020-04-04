@@ -4,11 +4,17 @@
 	box-sizing: border-box;
 }
 
+html,
+body {
+	height: auto;
+	min-height: 100%;
+}
+
 body {
 	font-family: 'Open Sans Condensed', sans-serif;
 	padding: 20px 40px;
-	/* max-width: 1200px; */
 	margin: 0 auto;
+	overflow-x: hidden;
 }
 
 a {
