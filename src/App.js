@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
@@ -23,34 +23,27 @@ import Footer from './components/Footer'
 // styles
 import './App.css'
 
-class App extends Component {
-	componentDidMount() {
-		const { checkUserSession } = this.props
+const App = ({ currentUser, checkUserSession }) => {
+	useEffect(() => {
 		checkUserSession()
-	}
+	}, [checkUserSession])
 
-	render() {
-		return (
-			<div>
-				<Header />
-				<Body>
-					<Switch>
-						<Route exact path='/' component={HomePage} />
-						<Route path='/shop' component={ShopPage} />
-						<Route exact path='/checkout' component={CheckoutPage} />
-						<Route exact path='/signin'>
-							{this.props.currentUser ? (
-								<Redirect to='/' />
-							) : (
-								<SignInAndSignUpPageContainer />
-							)}
-						</Route>
-					</Switch>
-				</Body>
-				<Footer />
-			</div>
-		)
-	}
+	return (
+		<div>
+			<Header />
+			<Body>
+				<Switch>
+					<Route exact path='/' component={HomePage} />
+					<Route path='/shop' component={ShopPage} />
+					<Route exact path='/checkout' component={CheckoutPage} />
+					<Route exact path='/signin'>
+						{currentUser ? <Redirect to='/' /> : <SignInAndSignUpPageContainer />}
+					</Route>
+				</Switch>
+			</Body>
+			<Footer />
+		</div>
+	)
 }
 
 const mapStateToProps = createStructuredSelector({

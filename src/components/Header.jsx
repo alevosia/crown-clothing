@@ -48,7 +48,6 @@ const OptionLink = styled(Link)`
 	text-transform: uppercase;
 `
 
-// Header component
 const Header = ({ currentUser, isCartHidden, signOutStart }) => {
 	return (
 		<HeaderContainer>
