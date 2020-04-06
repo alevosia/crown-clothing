@@ -14,11 +14,11 @@ paymentRouter.post('/payment', (req, res) => {
 
 	stripe.charges.create(body, (stripeError, stripeResponse) => {
 		if (stripeError) {
-			console.error(stripeResponse)
-			res.status(500)
+			console.error(stripeError)
+			res.status(500).send({ error: stripeError })
 		} else {
 			console.log(stripeResponse)
-			res.status(200)
+			res.status(200).send({ success: stripeResponse })
 		}
 	})
 })
