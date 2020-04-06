@@ -11,8 +11,8 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
-		"lint": "eslint .",
-		"lint:fix": "eslint --fix .",
+		"lint": "eslint . --ext .js --ext .jsx",
+		"lint:fix": "eslint . --fix --ext .js --ext .jsx",
 		"delete-build": "rm -rf build"
 	},
 	"dependencies": {
