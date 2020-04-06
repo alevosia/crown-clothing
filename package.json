@@ -5,13 +5,14 @@
 	"homepage": "https://royal-clothing.herokuapp.com/",
 	"scripts": {
 		"start": "react-scripts start",
-		"prebuild": "npm run format && npm run lint:fix && rm -r build",
+		"prebuild": "npm run format && npm run lint:fix && npm run delete-build",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
+		"format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
 		"lint": "eslint .",
 		"lint:fix": "eslint --fix .",
-		"format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+		"delete-build": "rm -rf build"
 	},
 	"dependencies": {
 		"@testing-library/jest-dom": "^4.2.4",
