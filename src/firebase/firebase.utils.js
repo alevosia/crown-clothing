@@ -43,7 +43,9 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 				...additionalData,
 			})
 		} catch (error) {
+			/* eslint-disable no-alert, no-console */
 			console.error('Error creating user', error)
+			/* eslint-enable no-alert, no-console */
 		}
 	}
 
