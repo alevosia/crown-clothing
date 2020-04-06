@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 
 // styled components
-
 const BackgroundImage = styled.div`
 	width: 100%;
 	height: 100%;

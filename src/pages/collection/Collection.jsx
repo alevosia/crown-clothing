@@ -9,7 +9,6 @@ import { selectCollection } from '../../redux/shop/shop.selectors'
 import CollectionItem from '../../components/CollectionItem'
 
 // styled components
-
 const StyledCollectionItem = styled(CollectionItem)``
 
 const CollectionPageWrapper = styled.div`
