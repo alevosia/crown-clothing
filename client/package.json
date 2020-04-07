@@ -44,17 +44,6 @@
 		"prettier": "^2.0.1",
 		"typescript": "^3.8.3"
 	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"plugin:prettier/recommended"
-		],
-		"rules": {
-			"no-eq-null": "error",
-			"no-eval": "error",
-			"no-console": "warn"
-		}
-	},
 	"browserslist": {
 		"production": [
 			">0.2%",

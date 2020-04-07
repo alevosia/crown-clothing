@@ -1,0 +1,8 @@
+{
+	"extends": ["react-app", "plugin:prettier/recommended"],
+	"rules": {
+		"no-eq-null": "error",
+		"no-eval": "error",
+		"no-console": "warn"
+	}
+}
