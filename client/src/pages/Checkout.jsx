@@ -21,6 +21,15 @@ const CheckoutPageWrapper = styled.div`
 	margin: 50px auto 0;
 `
 
+const HeaderBlock = styled.div`
+	text-transform: capitalize;
+	width: 23%;
+
+	&:last-child {
+		width: 8%;
+	}
+`
+
 const CheckOutHeaderContainer = styled.div`
 	font-size: 20px;
 	width: 100%;
@@ -29,22 +38,13 @@ const CheckOutHeaderContainer = styled.div`
 	justify-content: space-between;
 	border-bottom: 1px solid darkgrey;
 
-	:not(:first-child) {
+	${HeaderBlock} ~ :not(:first-child) {
 		text-align: center;
 	}
 
 	button {
 		margin-left: auto;
 		margin-top: 40px;
-	}
-`
-
-const HeaderBlock = styled.div`
-	text-transform: capitalize;
-	width: 23%;
-
-	&:last-child {
-		width: 8%;
 	}
 `
 
