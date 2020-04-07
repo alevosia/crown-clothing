@@ -4,7 +4,6 @@ import styled from 'styled-components'
 // styled components
 const BodyContainer = styled.div`
 	height: auto;
-	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 `
