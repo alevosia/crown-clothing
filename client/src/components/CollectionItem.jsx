@@ -59,6 +59,7 @@ const NameText = styled.span`
 
 const PriceText = styled.span`
 	width: 10%;
+	text-align: right;
 `
 
 const CollectionItem = ({ item, addItem, className }) => {
