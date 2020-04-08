@@ -47,13 +47,18 @@ const CustomButtonContainer = styled.button`
 	height: 50px;
 	letter-spacing: 0.5px;
 	line-height: 50px;
-	padding: 0 25px 0 25px;
+	padding: 0 25px;
 	text-transform: uppercase;
 	font-weight: bold;
 	display: flex;
 	justify-content: center;
 
 	${getButtonStyles}
+
+	@media screen and (max-width: 425px) {
+		padding: 0 10px;
+		font-size: 14px;
+	}
 `
 
 const CustomButton = ({ children, ...props }) => (

@@ -5,8 +5,12 @@ import styled from 'styled-components'
 const FooterContainer = styled.div`
 	width: 100%;
 	text-align: center;
-	margin-top: 60px;
+	padding: 30px;
 	letter-spacing: 2px;
+
+	@media screen and (max-width: 768px) {
+		padding: 10px;
+	}
 `
 
 const Footer = () => (

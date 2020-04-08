@@ -24,11 +24,19 @@ const ImageContainer = styled.div`
 		width: 100%;
 		height: 100%;
 	}
+
+	@media screen and (max-width: 425px) {
+		padding-right: 10px;
+	}
 `
 
 const ColumnStyles = css`
 	width: 23%;
 	text-align: center;
+
+	@media screen and (max-width: 425px) {
+		font-size: 16px;
+	}
 `
 const NameContainer = styled.span`
 	${ColumnStyles}
@@ -52,13 +60,22 @@ const ArrowIcon = styled.div`
 	cursor: pointer;
 	padding-left: 6px;
 	padding-right: 6px;
+
+	@media screen and (max-width: 425px) {
+		padding-left: 3px;
+		padding-right: 3px;
+	}
 `
 
 const RemoveButton = styled.span`
 	padding-left: 20px;
 	font-weight: bolder;
-	cursor: pointer;
 	text-align: center;
+	cursor: pointer;
+
+	@media screen and (max-width: 425px) {
+		padding-left: 0;
+	}
 `
 
 const CheckoutItem = ({ item, clearItemFromCart, addItem, removeItem }) => {

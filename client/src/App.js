@@ -20,8 +20,8 @@ import Header from './components/Header'
 import Body from './components/Body'
 import Footer from './components/Footer'
 
-// styles
-import './App.css'
+// global styles
+import { GlobalStyles } from './global.styles'
 
 const App = ({ currentUser, checkUserSession }) => {
 	useEffect(() => {
@@ -30,6 +30,7 @@ const App = ({ currentUser, checkUserSession }) => {
 
 	return (
 		<div>
+			<GlobalStyles />
 			<Header />
 			<Body>
 				<Switch>

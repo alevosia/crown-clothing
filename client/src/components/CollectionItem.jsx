@@ -15,7 +15,28 @@ const ImageContainer = styled.div`
 	background-size: cover;
 	background-position: center;
 	margin-bottom: 5px;
+
+	@media screen and (max-width: 425px) {
+		margin-bottom: 0;
+	}
 `
+
+const AddButton = styled(CustomButton)`
+	width: 80%;
+	opacity: 0.7;
+	position: absolute;
+	top: 255px;
+	display: none;
+
+	@media screen and (max-width: 425px) {
+		width: 90%;
+		display: block;
+		opacity: 0.9;
+		min-width: unset;
+		padding: 0;
+	}
+`
+
 const CollectionItemWrapper = styled.div`
 	width: 22vw;
 	display: flex;
@@ -23,23 +44,32 @@ const CollectionItemWrapper = styled.div`
 	height: 350px;
 	align-items: center;
 	position: relative;
-
-	button {
-		width: 80%;
-		opacity: 0.7;
-		position: absolute;
-		top: 255px;
-		display: none;
-	}
+	margin-bottom: 15px;
 
 	&:hover {
 		${ImageContainer} {
 			opacity: 0.8;
 		}
 
-		button {
+		${AddButton} {
 			opacity: 0.85;
 			display: block;
+		}
+	}
+
+	@media screen and (max-width: 425px) {
+		width: 45vw;
+		margin-bottom: 5px;
+
+		&:hover {
+			${ImageContainer} {
+				opacity: unset;
+			}
+
+			${AddButton} {
+				opacity: unset;
+				display: block;
+			}
 		}
 	}
 `
@@ -50,15 +80,18 @@ const CollectionFooterContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	font-size: 18px;
+
+	@media screen and (max-width: 425px) {
+		font-size: 14px;
+	}
 `
 
 const NameText = styled.span`
-	width: 90%;
-	margin-bottom: 15px;
+	width: 85%;
 `
 
 const PriceText = styled.span`
-	width: 10%;
+	width: 15%;
 	text-align: right;
 `
 
@@ -76,9 +109,9 @@ const CollectionItem = ({ item, addItem, className }) => {
 				<NameText>{name}</NameText>
 				<PriceText>${price}</PriceText>
 			</CollectionFooterContainer>
-			<CustomButton inverted onClick={() => addItem(item)}>
+			<AddButton inverted onClick={() => addItem(item)}>
 				Add to cart
-			</CustomButton>
+			</AddButton>
 		</CollectionItemWrapper>
 	)
 }

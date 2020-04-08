@@ -14,6 +14,10 @@ const StyledCollectionItem = styled(CollectionItem)``
 const CollectionPageWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
+
+	@media screen and (max-width: 425px) {
+		align-items: center;
+	}
 `
 
 const TitleText = styled.h2`
@@ -28,6 +32,16 @@ const ItemsContainer = styled.div`
 
 	${StyledCollectionItem} {
 		margin-bottom: 30px;
+	}
+
+	@media screen and (max-width: 425px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 15px;
+
+		${StyledCollectionItem} {
+			margin-bottom: 10px;
+		}
 	}
 `
 

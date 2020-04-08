@@ -19,6 +19,13 @@ const CheckoutPageWrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	margin: 50px auto 0;
+
+	@media screen and (max-width: 425px) {
+		width: 100%;
+		margin: 0;
+		min-width: unset;
+		padding: 10px;
+	}
 `
 
 const HeaderBlock = styled.div`
@@ -27,6 +34,14 @@ const HeaderBlock = styled.div`
 
 	&:last-child {
 		width: 8%;
+	}
+
+	@media screen and (max-width: 425px) {
+		font-size: 14px;
+
+		&:last-child {
+			width: unset;
+		}
 	}
 `
 
@@ -46,19 +61,35 @@ const CheckOutHeaderContainer = styled.div`
 		margin-left: auto;
 		margin-top: 40px;
 	}
+
+	@media screen and (max-width: 425px) {
+		font-size: 16px;
+	}
 `
 
 const TotalPriceContainer = styled.span`
 	margin-top: 30px;
 	margin-left: auto;
 	font-size: 36px;
+
+	@media screen and (max-width: 425px) {
+		font-size: 24px;
+		margin-top: 10px;
+	}
 `
 
 const TestWarningContainer = styled.div`
 	text-align: center;
 	margin-top: 40px;
+	margin-bottom: 20px;
 	font-size: 24px;
 	color: red;
+
+	@media screen and (max-width: 425px) {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 16px;
+	}
 `
 
 const CheckoutPage = ({ cartItems, cartTotalPrice }) => (

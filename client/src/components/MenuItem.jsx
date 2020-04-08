@@ -1,6 +1,6 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 // styled components
 const BackgroundImage = styled.div`
@@ -31,23 +31,16 @@ const TitleText = styled.h2`
 	text-transform: uppercase;
 `
 
-const largeMenuItemStyles = css`
-	height: 380px;
-`
-const getMenuItemStyles = (props) => (props.size === 'large' ? largeMenuItemStyles : null)
-
 const MenuItemWrapper = styled.div`
+	height: ${({ size }) => (size ? '380px' : '240px')};
 	min-width: 30%;
-	height: 240px;
+	overflow: hidden;
 	flex: 1 1 auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border: 1px solid black;
 	margin: 0 7.5px 15px;
-	overflow: hidden;
-
-	${getMenuItemStyles}
 
 	&:first-child {
 		margin-right: 7.5px;
@@ -67,6 +60,21 @@ const MenuItemWrapper = styled.div`
 
 		& ${ContentContainer} {
 			opacity: 0.9;
+		}
+	}
+
+	@media screen and (max-width: 425px) {
+		height: 200px;
+		margin: 1px;
+		min-width: 40%;
+		border: none;
+
+		&:first-child {
+			margin-right: 0;
+		}
+
+		&:last-child {
+			margin-left: 0;
 		}
 	}
 `

@@ -12,6 +12,10 @@ const FormGroupWrapper = styled.div`
 	input[type='password'] {
 		letter-spacing: 0.3em;
 	}
+
+	@media screen and (max-width: 425px) {
+		margin: 15px 0;
+	}
 `
 
 const shrinkLabelStyles = css`

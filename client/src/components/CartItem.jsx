@@ -10,6 +10,12 @@ const CartItemWrapper = styled.div`
 	img {
 		width: 30%;
 	}
+
+	@media screen and (max-width: 425px) {
+		img {
+			width: 40%;
+		}
+	}
 `
 
 const ItemDetailsContainer = styled.div`
@@ -19,6 +25,10 @@ const ItemDetailsContainer = styled.div`
 	align-items: flex-start;
 	justify-content: center;
 	padding: 10px 20px;
+
+	@media screen and (max-width: 425px) {
+		padding: 5px 10px;
+	}
 `
 
 const NameText = styled.span`

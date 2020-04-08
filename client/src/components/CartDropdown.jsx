@@ -30,6 +30,13 @@ const CartDropdownWrapper = styled.div`
 	button {
 		margin-top: auto;
 	}
+
+	@media screen and (max-width: 425px) {
+		height: 300px;
+		width: 190px;
+		right: 18px;
+		top: 50px;
+	}
 `
 
 const CartItemsContainer = styled.div`
