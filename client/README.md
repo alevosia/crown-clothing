@@ -1,6 +1,6 @@
 The frontend of the app made with React and Redux
 
---- 
+---
 
 ## Available Scripts
 
