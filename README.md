@@ -1,21 +1,3 @@
-<style>
-    .store-link {
-        color: #161514;
-        background: #f1f1f1;
-        padding: 8px 32px;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 600px;
-        letter-spacing: 2px;
-    }
-
-    .store-link:hover {
-        color: #f1f1f1;
-        background: #161514;
-        text-decoration: none;
-    }
-</style>
-
 <p align="center">
     <a href="https://royal-clothing.herokuapp.com/" target="_blank">
         <img src="https://raw.githubusercontent.com/alevfalse/crown-clothing/master/client/src/assets/crown.png" alt="crown" />
@@ -30,7 +12,6 @@
         View Store
     </a>
 </p>
-<br />
 
 --- 
 
