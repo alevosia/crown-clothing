@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, lazy, Suspense } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
@@ -9,19 +9,22 @@ import { checkUserSession } from './redux/user/user.actions'
 // selectors
 import { selectCurrentUser } from './redux/user/user.selectors'
 
-// pages
-import HomePage from './pages/Home'
-import SignInAndSignUpPageContainer from './pages/sign-in-and-sign-up/SignInAndSignUpContainer'
-import ShopPage from './pages/Shop'
-import CheckoutPage from './pages/Checkout'
-
 // components
 import Header from './components/Header'
 import Body from './components/Body'
 import Footer from './components/Footer'
+import Spinner from './components/Spinner'
 
 // global styles
 import { GlobalStyles } from './global.styles'
+
+/* eslint-disable import/first */
+const HomePage = lazy(() => import('./pages/Home'))
+const ShopPage = lazy(() => import('./pages/Shop'))
+const CheckoutPage = lazy(() => import('./pages/Checkout'))
+const SignInAndSignUpPageContainer = lazy(() =>
+	import('./pages/sign-in-and-sign-up/SignInAndSignUpContainer')
+)
 
 const App = ({ currentUser, checkUserSession }) => {
 	useEffect(() => {
@@ -34,13 +37,14 @@ const App = ({ currentUser, checkUserSession }) => {
 			<Header />
 			<Body>
 				<Switch>
-					<Route exact path='/' component={HomePage} />
-					<Route path='/shop' component={ShopPage} />
-					<Route exact path='/checkout' component={CheckoutPage} />
-					<Route exact path='/signin'>
-						{currentUser ? <Redirect to='/' /> : <SignInAndSignUpPageContainer />}
-					</Route>
-					<Route component={HomePage} />
+					<Suspense fallback={<Spinner />}>
+						<Route exact path='/' component={HomePage} />
+						<Route path='/shop' component={ShopPage} />
+						<Route exact path='/checkout' component={CheckoutPage} />
+						<Route exact path='/signin'>
+							{currentUser ? <Redirect to='/' /> : <SignInAndSignUpPageContainer />}
+						</Route>
+					</Suspense>
 				</Switch>
 			</Body>
 			<Footer />
