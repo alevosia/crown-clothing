@@ -58,10 +58,6 @@ class ErrorBoundary extends Component {
 		return { hasErrored: true }
 	}
 
-	componentDidCatch(error, info) {
-		console.error(error.message)
-	}
-
 	render() {
 		if (this.state.hasErrored) {
 			return (
