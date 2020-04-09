@@ -16,6 +16,12 @@
 
 --- 
 
+## Screenshots
+
+![Screenshots](https://i.imgur.com/tQ9YLUj.png)
+
+--- 
+
 ## Quick Start
 
 - run `npm install`
@@ -48,9 +54,3 @@ Starts the app in production mode.<br />
 ## Other Dependencies
 
 [Axios](https://github.com/axios/axios), [Redux Core](https://github.com/reduxjs/redux), [React Redux](https://github.com/reduxjs/react-redux), [Redux Saga](https://github.com/redux-saga/redux-saga), [Redux Persist](https://github.com/rt2zz/redux-persist), [Redux Logger](https://github.com/LogRocket/redux-logger), [Reselect](https://github.com/reduxjs/reselect), [Styled Components](https://styled-components.com/)
-
---- 
-
-## Screenshots
-
-![Screenshots](https://i.imgur.com/tQ9YLUj.png)
