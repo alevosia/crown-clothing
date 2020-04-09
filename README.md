@@ -1,7 +1,7 @@
 ![CROWN](https://raw.githubusercontent.com/alevfalse/crown-clothing/master/client/src/assets/crown.png)
 # CROWN CLOTHING
-An e-commerce app made with Express and React.  
-Browse a live version of the store at https://royal-clothing.herokuapp.com/
+An e-commerce app made with Express and React with Firebase and Stripe API integrations.  
+Check out the live version of the store [here](https://royal-clothing.herokuapp.com/).
 
 ## Quick Start
 
@@ -35,3 +35,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 ### `npm start`
 
 Starts the app in production mode.<br />
+
+## Other Dependencies
+
+Axios, Redux Core/React/Saga/Persist/Logger, Reselect, & Styled Components
