@@ -6,7 +6,7 @@
 </p>
 <h2 align="center">CROWN CLOTHING</h1>
 <p align="center">
-    An e-commerce app made with Express and React with Firebase and Stripe API integrations.
+    An e-commerce app made with Express and React with Firebase and Stripe API integrations
     <br/>
     <br/>
     <a  class="store-link" href="https://royal-clothing.herokuapp.com/" target="_blank">
