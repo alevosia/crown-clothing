@@ -4,9 +4,9 @@ Browse a live version of the store at https://royal-clothing.herokuapp.com/
 
 ## Quick Start
 
-1. run `npm install`
-2. set PORT and STRIPE_SECRET_KEY environment variables
-3. Start hacking!
+- run `npm install`
+- set `PORT` and `STRIPE_SECRET_KEY` environment variables
+- start hacking!
 
 --- 
 
