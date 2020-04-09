@@ -46,7 +46,6 @@ const CustomButtonContainer = styled.button`
 	width: auto;
 	height: 50px;
 	letter-spacing: 0.5px;
-	line-height: 50px;
 	padding: 0 25px;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -56,6 +55,8 @@ const CustomButtonContainer = styled.button`
 	${getButtonStyles}
 
 	@media screen and (max-width: 425px) {
+		height: 40px;
+		width: 100%;
 		padding: 0 10px;
 		font-size: 14px;
 	}
