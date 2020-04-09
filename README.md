@@ -1,7 +1,38 @@
-![CROWN](https://raw.githubusercontent.com/alevfalse/crown-clothing/master/client/src/assets/crown.png)
-# CROWN CLOTHING
-An e-commerce app made with Express and React with Firebase and Stripe API integrations.  
-Check out the live version of the store [here](https://royal-clothing.herokuapp.com/).
+<style>
+    .store-link {
+        color: #161514;
+        background: #f1f1f1;
+        padding: 8px 32px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600px;
+        letter-spacing: 2px;
+    }
+
+    .store-link:hover {
+        color: #f1f1f1;
+        background: #161514;
+        text-decoration: none;
+    }
+</style>
+
+<p align="center">
+    <a href="https://royal-clothing.herokuapp.com/" target="_blank">
+        <img src="https://raw.githubusercontent.com/alevfalse/crown-clothing/master/client/src/assets/crown.png" alt="crown" />
+    </a><br/>
+</p>
+<h2 align="center">CROWN CLOTHING</h1>
+<p align="center">
+    An e-commerce app made with Express and React with Firebase and Stripe API integrations.
+    <br/>
+    <br/>
+    <a  class="store-link" href="https://royal-clothing.herokuapp.com/" target="_blank">
+        View Store
+    </a>
+</p>
+<br />
+
+--- 
 
 ## Quick Start
 
@@ -37,6 +68,8 @@ It correctly bundles React in production mode and optimizes the build for the be
 ### `npm start`
 
 Starts the app in production mode.<br />
+
+---
 
 ## Other Dependencies
 
