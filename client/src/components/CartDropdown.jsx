@@ -39,8 +39,8 @@ const CartDropdownWrapper = styled.div`
 	@media screen and (max-width: 425px) {
 		top: 50px;
 		right: 18px;
-		height: 300px;
-		width: 190px;
+		height: 320px;
+		width: 220px;
 	}
 `
 

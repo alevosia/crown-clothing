@@ -21,8 +21,14 @@ const CollectionPageWrapper = styled.div`
 `
 
 const TitleText = styled.h2`
+	text-transform: uppercase;
 	font-size: 38px;
-	margin: 0 auto 30px;
+	margin-bottom: 25px;
+
+	@media screen and (max-width: 425px) {
+		font-size: 28px;
+		margin-bottom: 5px;
+	}
 `
 
 const ItemsContainer = styled.div`
@@ -37,7 +43,7 @@ const ItemsContainer = styled.div`
 	@media screen and (max-width: 425px) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 15px;
+		grid-gap: 5px;
 
 		${StyledCollectionItem} {
 			margin-bottom: 10px;

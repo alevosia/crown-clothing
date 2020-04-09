@@ -21,9 +21,11 @@ const TitleText = styled.h1`
 	margin-bottom: 25px;
 
 	@media screen and (max-width: 425px) {
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 	}
 `
+
+const StyledCollectionItem = styled(CollectionItem)``
 
 const PreviewContainer = styled.div`
 	display: flex;
@@ -32,7 +34,11 @@ const PreviewContainer = styled.div`
 	@media screen and (max-width: 425px) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 15px;
+		grid-gap: 5px;
+
+		${StyledCollectionItem} {
+			margin-bottom: 10px;
+		}
 	}
 `
 
@@ -45,7 +51,7 @@ const CollectionPreview = ({ title, items, history }) => (
 			{items
 				.filter((item, idx) => idx < 4)
 				.map((item) => (
-					<CollectionItem key={item.id} item={item} />
+					<StyledCollectionItem key={item.id} item={item} />
 				))}
 		</PreviewContainer>
 	</CollectionPreviewWrapper>

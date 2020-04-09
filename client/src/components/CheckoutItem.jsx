@@ -14,10 +14,16 @@ const CheckoutItemWrapper = styled.div`
 	padding: 15px 0;
 	font-size: 20px;
 	align-items: center;
+	justify-content: space-between;
+
+	@media screen and (max-width: 425px) {
+		padding: 5px 0;
+		min-height: 50px;
+	}
 `
 
 const ImageContainer = styled.div`
-	width: 23%;
+	width: 20%;
 	padding-right: 15px;
 
 	img {
@@ -31,7 +37,7 @@ const ImageContainer = styled.div`
 `
 
 const ColumnStyles = css`
-	width: 23%;
+	width: 20%;
 	text-align: center;
 
 	@media screen and (max-width: 425px) {
@@ -47,9 +53,9 @@ const PriceContainer = styled.span`
 `
 
 const QuantityContainer = styled.div`
+	${ColumnStyles}
 	display: flex;
 	justify-content: center;
-	${ColumnStyles}
 `
 
 const QuantityValueText = styled.span`
@@ -57,6 +63,7 @@ const QuantityValueText = styled.span`
 `
 
 const ArrowIcon = styled.div`
+	${ColumnStyles}
 	cursor: pointer;
 	padding-left: 6px;
 	padding-right: 6px;
@@ -68,14 +75,14 @@ const ArrowIcon = styled.div`
 `
 
 const RemoveButton = styled.span`
-	padding-left: 20px;
+	width: 10%;
 	font-weight: bolder;
 	text-align: center;
 	cursor: pointer;
 
-	@media screen and (max-width: 425px) {
+	/* @media screen and (max-width: 425px) {
 		padding-left: 0;
-	}
+	} */
 `
 
 const CheckoutItem = ({ item, clearItemFromCart, addItem, removeItem }) => {

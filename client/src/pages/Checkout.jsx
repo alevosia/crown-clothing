@@ -30,10 +30,10 @@ const CheckoutPageWrapper = styled.div`
 
 const HeaderBlock = styled.div`
 	text-transform: capitalize;
-	width: 23%;
+	width: 20%;
 
 	&:last-child {
-		width: 8%;
+		width: 10%;
 	}
 
 	@media screen and (max-width: 425px) {

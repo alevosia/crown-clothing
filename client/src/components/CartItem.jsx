@@ -8,18 +8,16 @@ const CartItemWrapper = styled.div`
 	height: 80px;
 	margin-bottom: 15px;
 	img {
-		width: 30%;
+		width: 25%;
 	}
 
 	@media screen and (max-width: 425px) {
-		img {
-			width: 40%;
-		}
+		margin-bottom: 5px;
 	}
 `
 
 const ItemDetailsContainer = styled.div`
-	width: 70%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
