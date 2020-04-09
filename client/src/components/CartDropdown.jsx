@@ -24,18 +24,23 @@ const CartDropdownWrapper = styled.div`
 	border: 1px solid black;
 	background-color: white;
 	top: 90px;
-	right: 40px;
+	right: 48px;
 	z-index: 5;
 
 	button {
 		margin-top: auto;
 	}
 
+	@media screen and (max-width: 768px) {
+		top: 70px;
+		right: 18px;
+	}
+
 	@media screen and (max-width: 425px) {
+		top: 50px;
+		right: 18px;
 		height: 300px;
 		width: 190px;
-		right: 18px;
-		top: 50px;
 	}
 `
 
