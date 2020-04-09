@@ -36,12 +36,12 @@ const HomeButton = styled.a`
 	text-align: center;
 	color: white;
 	background: #161514;
+	border: 1px solid #161514;
 	margin-top: 10px;
 
 	&:hover {
 		color: #161514;
 		background: white;
-		border: 1px solid #161514;
 	}
 `
 
