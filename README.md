@@ -7,6 +7,8 @@ Check out the live version of the store [here](https://royal-clothing.herokuapp.
 
 - run `npm install`
 - set `PORT` and `STRIPE_SECRET_KEY` environment variables
+- get your firebase config from your firebase project settings
+- set the `config` object in the `firebase.config.js` file located in `client/src/firebase`
 - start hacking!
 
 --- 
