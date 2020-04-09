@@ -22,19 +22,21 @@ const ImageContainer = styled.div`
 `
 
 const AddButton = styled(CustomButton)`
+	min-width: unset;
 	width: 80%;
 	opacity: 0.7;
 	position: absolute;
 	top: 255px;
 	display: none;
 
-	@media screen and (max-width: 425px) {
-		top: 275px;
-		width: 80%;
+	@media screen and (max-width: 768px) {
 		display: block;
 		opacity: 0.9;
-		min-width: unset;
 		padding: 0;
+	}
+
+	@media screen and (max-width: 425px) {
+		top: 275px;
 	}
 `
 
@@ -58,10 +60,7 @@ const CollectionItemWrapper = styled.div`
 		}
 	}
 
-	@media screen and (max-width: 425px) {
-		width: 45vw;
-		margin-bottom: 5px;
-
+	@media screen and (max-width: 768px) {
 		&:hover {
 			${ImageContainer} {
 				opacity: unset;
@@ -72,6 +71,11 @@ const CollectionItemWrapper = styled.div`
 				display: block;
 			}
 		}
+	}
+
+	@media screen and (max-width: 425px) {
+		width: 45vw;
+		margin-bottom: 5px;
 	}
 `
 
