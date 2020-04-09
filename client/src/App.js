@@ -40,6 +40,7 @@ const App = ({ currentUser, checkUserSession }) => {
 					<Route exact path='/signin'>
 						{currentUser ? <Redirect to='/' /> : <SignInAndSignUpPageContainer />}
 					</Route>
+					<Route component={HomePage} />
 				</Switch>
 			</Body>
 			<Footer />
