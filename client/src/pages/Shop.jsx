@@ -21,7 +21,7 @@ const ShopPage = ({ match, fetchCollectionsStart }) => {
 
 	return (
 		<div>
-			<Suspense fallback={Spinner}>
+			<Suspense fallback={<Spinner />}>
 				<Route exact path={`${match.path}`} component={CollectionsOverviewContainer} />
 				<Route path={`${match.path}/:collectionId`} component={CollectionPageContainer} />
 			</Suspense>
