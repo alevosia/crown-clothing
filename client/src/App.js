@@ -14,6 +14,7 @@ import Header from './components/Header'
 import Body from './components/Body'
 import Footer from './components/Footer'
 import Spinner from './components/Spinner'
+import ErrorBoundary from './components/ErrorBoundary'
 
 // global styles
 import { GlobalStyles } from './global.styles'
@@ -37,14 +38,20 @@ const App = ({ currentUser, checkUserSession }) => {
 			<Header />
 			<Body>
 				<Switch>
-					<Suspense fallback={<Spinner />}>
-						<Route exact path='/' component={HomePage} />
-						<Route path='/shop' component={ShopPage} />
-						<Route exact path='/checkout' component={CheckoutPage} />
-						<Route exact path='/signin'>
-							{currentUser ? <Redirect to='/' /> : <SignInAndSignUpPageContainer />}
-						</Route>
-					</Suspense>
+					<ErrorBoundary>
+						<Suspense fallback={<Spinner />}>
+							<Route exact path='/' component={HomePage} />
+							<Route path='/shop' component={ShopPage} />
+							<Route exact path='/checkout' component={CheckoutPage} />
+							<Route exact path='/signin'>
+								{currentUser ? (
+									<Redirect to='/' />
+								) : (
+									<SignInAndSignUpPageContainer />
+								)}
+							</Route>
+						</Suspense>
+					</ErrorBoundary>
 				</Switch>
 			</Body>
 			<Footer />
