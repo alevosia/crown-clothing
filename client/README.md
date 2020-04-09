@@ -1,4 +1,6 @@
-Browse the store at https://royal-clothing.herokuapp.com/
+The frontend of the app made with React and Redux
+
+--- 
 
 ## Available Scripts
 
