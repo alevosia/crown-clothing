@@ -11,14 +11,14 @@ const CheckoutItemWrapper = styled.div`
 	display: flex;
 	min-height: 100px;
 	border-bottom: 1px solid darkgrey;
-	padding: 15px 0;
+	padding: 15px 0 8px 0;
 	font-size: 20px;
 	align-items: center;
 	justify-content: space-between;
 
 	@media screen and (max-width: 425px) {
-		padding: 5px 0;
-		min-height: 50px;
+		padding: 10px 0 3px 0;
+		min-height: 60px;
 	}
 `
 
