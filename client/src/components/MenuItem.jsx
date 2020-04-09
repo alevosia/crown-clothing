@@ -21,14 +21,21 @@ const ContentContainer = styled.div`
 	background-color: white;
 	opacity: 0.7;
 	position: absolute;
+
+	@media screen and (max-width: 425px) {
+		height: 50px;
+	}
 `
 
 const TitleText = styled.h2`
 	font-weight: bold;
-	margin-bottom: 6px;
 	font-size: 24px;
 	color: #4a4a4a;
 	text-transform: uppercase;
+
+	@media screen and (max-width: 425px) {
+		font-size: 18px;
+	}
 `
 
 const MenuItemWrapper = styled.div`

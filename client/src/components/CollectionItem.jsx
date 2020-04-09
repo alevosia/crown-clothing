@@ -29,7 +29,8 @@ const AddButton = styled(CustomButton)`
 	display: none;
 
 	@media screen and (max-width: 425px) {
-		width: 90%;
+		top: 275px;
+		width: 80%;
 		display: block;
 		opacity: 0.9;
 		min-width: unset;

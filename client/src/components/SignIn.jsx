@@ -20,7 +20,8 @@ const SignInContainer = styled.div`
 	}
 
 	@media screen and (max-width: 425px) {
-		padding: 15px;
+		width: 100%;
+		padding: 10px;
 	}
 `
 

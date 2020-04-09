@@ -29,7 +29,7 @@ const HeaderContainer = styled.div`
 	@media screen and (max-width: 425px) {
 		height: 60px;
 		padding: 10px;
-		margin-bottom: 10px;
+		margin-bottom: 0;
 	}
 `
 
@@ -56,7 +56,7 @@ const OptionsContainer = styled.div`
 	justify-content: flex-end;
 
 	@media screen and (max-width: 425px) {
-		width: 80%;
+		width: 100%;
 		font-size: 16px;
 	}
 `
