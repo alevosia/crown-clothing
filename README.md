@@ -16,8 +16,6 @@
 
 --- 
 
-## Screenshots
-
 ![Screenshots](https://i.imgur.com/tQ9YLUj.png)
 
 --- 
