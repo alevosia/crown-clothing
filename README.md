@@ -1,3 +1,4 @@
+![CROWN](https://raw.githubusercontent.com/alevfalse/crown-clothing/master/client/src/assets/crown.png)
 # CROWN CLOTHING
 An e-commerce app made with Express and React.  
 Browse a live version of the store at https://royal-clothing.herokuapp.com/
