@@ -30,14 +30,6 @@
 
 In the project directory, you can run:
 
-### `npm run client`
-
-Starts the client app for development.
-
-### `npm run server`
-
-Starts the server app for development.
-
 ### `npm run dev`
 
 Concurrently starts the server and client apps for development.
@@ -55,4 +47,10 @@ Starts the app in production mode.<br />
 
 ## Other Dependencies
 
-Axios, Redux Core/React/Saga/Persist/Logger, Reselect, & Styled Components
+[Axios](https://github.com/axios/axios), [Redux Core](https://github.com/reduxjs/redux), [React Redux](https://github.com/reduxjs/react-redux), [Redux Saga](https://github.com/redux-saga/redux-saga), [Redux Persist](https://github.com/rt2zz/redux-persist), [Redux Logger](https://github.com/LogRocket/redux-logger), [Reselect](https://github.com/reduxjs/reselect), [Styled Components](https://styled-components.com/)
+
+--- 
+
+## Screenshots
+
+![Screenshots](https://i.imgur.com/tQ9YLUj.png)
