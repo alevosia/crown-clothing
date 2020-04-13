@@ -1,6 +1,7 @@
 {
 	"name": "crown-clothing",
 	"version": "1.0.0",
+	"private": true,
 	"engines": {
 		"node": "v12.16.0",
 		"npm": "6.13.4"
@@ -16,14 +17,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/alevfalse/crown-clothing.git"
+		"url": "git+https://github.com/alevosia/crown-clothing.git"
 	},
 	"author": "Alex",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/alevfalse/crown-clothing/issues"
+		"url": "https://github.com/alevosia/crown-clothing/issues"
 	},
-	"homepage": "https://github.com/alevfalse/crown-clothing#readme",
+	"homepage": "https://github.com/alevosia/crown-clothing#readme",
 	"dependencies": {
 		"compression": "^1.7.4",
 		"cors": "^2.8.5",
