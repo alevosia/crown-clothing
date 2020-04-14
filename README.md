@@ -4,7 +4,7 @@
         <img src="https://raw.githubusercontent.com/alevfalse/crown-clothing/master/client/src/assets/crown.png" alt="crown" />
     </a><br/>
 </p>
-<h2 align="center">CROWN CLOTHING</h1>
+<h2 align="center">CROWN CLOTHING</h2>
 <p align="center">
     An e-commerce app made with Express and React with Firebase and Stripe API integrations
     <br/>
